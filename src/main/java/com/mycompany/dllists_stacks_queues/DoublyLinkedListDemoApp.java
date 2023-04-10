@@ -35,5 +35,7 @@ public class DoublyLinkedListDemoApp {
       // Output final list
       System.out.print("List after removing nodes: ");
       numList.printList();
+
+      numList.toArray();
    }
 }
