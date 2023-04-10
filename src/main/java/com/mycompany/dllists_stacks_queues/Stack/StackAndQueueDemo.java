@@ -57,5 +57,18 @@ public class StackAndQueueDemo {
       numQueue.dequeue();
       System.out.print("Queue after second dequeue:   ");
       numQueue.print();
+
+
+      //String str = "CSC229";
+      //Stack strstack = new Stack();
+      //for(int x=0; x<str.length(); x++){
+       //strstack.push((int)((char)str.indexOf(x)));
+
+     // }
+      ///for(int x=0; x<strstack.getSize(); x++){
+        ///(char)strstack.pop(x);
+
+      ///}
+
    }
 }

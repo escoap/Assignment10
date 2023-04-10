@@ -94,4 +94,31 @@ public class DoublyLinkedList {
       if (currentNode == tail)
          tail = predecessor;
    }
-}
+
+   public int[] toArray() {
+      int[] arr = new int[this.getSize()];
+      Node current = head;
+      int i = 0;
+      while (current != null) {
+          arr[i++] = current.data;
+          current = current.next;
+      }
+      return arr;
+  }
+  
+      private int getSize() {
+      int count = 0;
+      Node current = head;
+      while (current != null) {
+          count++;
+          current = current.next;
+      }
+      return count;
+  }
+
+
+
+
+  }
+       
+

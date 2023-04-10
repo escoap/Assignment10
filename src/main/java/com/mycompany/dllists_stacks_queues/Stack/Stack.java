@@ -24,12 +24,23 @@ class Stack {
       
       // Remove list head
       linkedList.removeAfter(null);
-      
       // Return popped item
       return poppedItem;
+   }
+
+   public boolean isEmpty(){
+      if(linkedList.getCount()==0){
+         return true;
+      }
+      return false;
    }
    
    public void print() {
       linkedList.printList();
+   }
+
+   public int getSize(){
+         return linkedList.getCount();
+
    }
 }

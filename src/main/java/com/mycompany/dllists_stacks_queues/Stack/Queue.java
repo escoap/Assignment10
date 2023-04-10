@@ -11,7 +11,7 @@ class Queue {
    Queue() {
       linkedList = new LinkedList();
    }
-   
+
    public void enqueue(int newData) {
       // Create a new node
       Node newNode = new Node(newData);
@@ -33,5 +33,16 @@ class Queue {
    
    public void print() {
       linkedList.printList();
+   }
+   public boolean isEmpty(){
+      if(linkedList.getCount()==0){
+         return true;
+      }
+      return false;
+   }
+   
+   public int getSize(){
+      return linkedList.getCount();
+
    }
 }

@@ -18,10 +18,12 @@ class Node {
 class LinkedList {
    private Node head;
    private Node tail;
+   private int count;
     
    public LinkedList() {
       head = null;
       tail = null;
+      count=0;
    }
     
    public void append(Node newNode) {
@@ -33,6 +35,7 @@ class LinkedList {
          tail.next = newNode;
          tail = newNode;
       }
+      count++;
    }
    
    public void prepend(Node newNode) {
@@ -44,6 +47,7 @@ class LinkedList {
          newNode.next = head;
          head = newNode;
       }
+      count++;
    }
    
    public void printList() {
@@ -68,6 +72,7 @@ class LinkedList {
          newNode.next = currentNode.next;
          currentNode.next = newNode;
       }
+      count++;
    }
    
    public void removeAfter(Node currentNode) {
@@ -88,11 +93,17 @@ class LinkedList {
             tail = currentNode;
          }
       }
+      count--;
    }
    
    
    // Added for Stack/Queue section
    public int getHeadData() {
       return head.data;
+   }
+
+   public int getCount(){
+      return count;
+
    }
 }
