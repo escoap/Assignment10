@@ -105,6 +105,31 @@ public class DoublyLinkedList {
       }
       return arr;
   }
+
+  public int indexOf(int obj) {
+   int index = 0;
+   Node current = head;
+   while (current != null) {
+   if (current.data==obj) {
+   return index;
+   }
+   index++;
+   current = current.next;
+   }
+   return -1;
+   }
+   
+   public int sumLastMElements(int m) {
+   int sum = 0;
+   Node current = tail;
+   int count = 0;
+   while (current != null && count < m) {
+   sum += current.data;
+   current = current.previous;
+   count++;
+   }
+   return sum;
+   }
   
       private int getSize() {
       int count = 0;
